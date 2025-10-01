@@ -1,0 +1,117 @@
+/* 전체 페이지 설정: 세로 꽉 채우기 및 가로 스크롤 숨김 */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden; /* 가로 스크롤 숨김 */
+  overflow-y: auto;  /* 세로 스크롤 자동 표시 (페이지 전체) */
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* 뷰포트 높이만큼 최소 높이 설정 */
+  background-color: #282c34;
+  color: white;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  overflow: visible; /* 페이지 전체 스크롤을 body에서 담당하도록 함 */
+}
+
+.App-header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+select, input[type="file"], button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+select, input[type="file"] {
+  background-color: #3f444c;
+  color: white;
+}
+
+button {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+}
+
+button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.file-list {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.file-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-list li {
+  margin-bottom: 5px;
+}
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.results {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.result-box {
+  background-color: #1a1e24;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  overflow: hidden; /* 내부 요소가 넘쳐서 가로 스크롤이 생기는 것을 방지 */
+}
+
+.filename {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #61dafb;
+}
+
+.text-content {
+  /* 글씨 잘림 및 가로 스크롤 문제를 해결하는 핵심 */
+  white-space: pre-wrap; /* 공백 및 줄바꿈을 유지하면서 컨테이너 너비에 맞게 줄바꿈 */
+  word-wrap: break-word; /* 긴 단어/문자열이 넘칠 때 줄바꿈 */
+  word-break: break-all; /* 긴 문자열 강제 줄바꿈 (가로 스크롤 방지) */
+  
+  max-height: 500px;
+  overflow-y: auto; /* 결과 텍스트 영역에 세로 스크롤 활성화 */
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  color: #f0f0f0;
+}
