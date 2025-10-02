@@ -18,14 +18,18 @@ pytesseract.pytesseract.tesseract_cmd = r"C:/Program Files/Tesseract-OCR/tessera
 pip install -r requirements.txt
 
 1. OCR 라이브러리 설치 (설치가 안 되었을수도 있으니 한 번 더 체크)
+
 pip install pytesseract 
 pip install easyocr
 pip install paddleocr
 
-pip install git+https://github.com/haven-jeon/PyKoSpacing.git           # pykospacing 설치
+pip install git+https://github.com/haven-jeon/PyKoSpacing.git           
+
+// pykospacing 설치
 
 pip install fastapi #자동 설치가 안 되었을 시 설치
 pip install uvicorn 
+
 // uvicorn이 다른 경로를 가리키고 있을 확률이 큼. 가상환경을 만들었다면, 여기서도 uvicorn install
 
 # Back 실행
