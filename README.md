@@ -1,5 +1,7 @@
 # 파이썬 3.10버전을 사용하고 있습니다.
-python3.10 --version     
+python3.10 --version  
+py --list
+   
 // 3.10 버전이 있는지 확인. 없다면 다운 https://www.python.org/downloads/release/python-31011/?utm_source=chatgpt.com     <- 설치경로 알아놔야함
 
 # Back 환경 설정
