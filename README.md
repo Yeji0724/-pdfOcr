@@ -1,7 +1,7 @@
 # 파이썬 3.10버전을 사용하고 있습니다.
 python3.10 --version  
 py --list
-   
+
 // 3.10 버전이 있는지 확인. 없다면 다운 https://www.python.org/downloads/release/python-31011/?utm_source=chatgpt.com     <- 설치경로 알아놔야함
 
 # Back 환경 설정
@@ -29,7 +29,8 @@ pip install git+https://github.com/haven-jeon/PyKoSpacing.git
 
 // pykospacing 설치
 
-pip install fastapi #자동 설치가 안 되었을 시 설치
+pip install fastapi     #자동 설치가 안 되었을 시 설치
+
 pip install uvicorn 
 
 // uvicorn이 다른 경로를 가리키고 있을 확률이 큼. 가상환경을 만들었다면, 여기서도 uvicorn install
