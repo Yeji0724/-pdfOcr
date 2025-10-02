@@ -1,8 +1,8 @@
-# 파이썬 3.10버전을 사용하고 있습니다.
+0. 파이썬 3.10버전을 사용하고 있습니다.
 python3.10 --version     
 // 3.10 버전이 있는지 확인. 없다면 다운 https://www.python.org/downloads/release/python-31011/?utm_source=chatgpt.com     <- 설치경로 알아놔야함
 
-# Back 환경 설정
+1. Back 환경 설정
 cd pdfocr\back
 C:\Users\4Class_14\AppData\Local\Programs\Python\Python310\python.exe -m venv venv      
 // 가상환경 생성 , 설치경로 직접 지정해서 생성.
@@ -10,14 +10,14 @@ C:\Users\4Class_14\AppData\Local\Programs\Python\Python310\python.exe -m venv ve
 venv\scripts\activate       
 // 가상환경 활성화
 
-# Tesseract OCR 경로 지정
+2. Tesseract OCR 경로 지정
 pytesseract.pytesseract.tesseract_cmd = r"C:/Program Files/Tesseract-OCR/tesseract.exe"   
 // 경로는 자신의 경로에 맞게 변경  pdfocr.py 파일에 약 20번째 줄
 
-# requirements 설치
+3. requirements 설치
 pip install -r requirements.txt
 
-# OCR 라이브러리 설치 (설치가 안 되었을수도 있으니 한 번 더 체크)
+4. OCR 라이브러리 설치 (설치가 안 되었을수도 있으니 한 번 더 체크)
 pip install pytesseract 
 pip install easyocr
 pip install paddleocr
@@ -28,15 +28,14 @@ pip install fastapi #자동 설치가 안 되었을 시 설치
 pip install uvicorn 
 // uvicorn이 다른 경로를 가리키고 있을 확률이 큼. 가상환경을 만들었다면, 여기서도 uvicorn install
 
-# Back 실행
+5. Back 실행
 uvicorn main:app --reload
 
-# Front 환경 설정
+6. Front 환경 설정
 cd pdfocr\front
-python3.9 -m venv venv
 venv\scripts\activate
 
-# Front 실행
+7. Front 실행
 npm start
 
 
